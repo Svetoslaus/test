@@ -9,6 +9,8 @@ const Login = () => {
  const [loading, setLoading] = useState(false);
  const auth = FIREBASE_AUTH;
 
+
+
  const signIn = async () => {
     setLoading(true);
     try {
@@ -58,12 +60,15 @@ const Login = () => {
        autoCapitalize='none' 
        onChangeText={(text) => setPassword(text)}
        >
+       
+     
        </TextInput>
     {loading ? <ActivityIndicator size="large" color="#0000ff"/> : 
      (
         <>
          <Button title='Login' onPress={signIn}/>
          <Button title='Create Account' onPress={signUp}/>
+         
         </>
      )
     }
